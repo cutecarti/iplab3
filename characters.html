@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Персонажи романа</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body onload="startClock()">
+    <nav>...</nav>
+    
+    <h1>Персонажи романа</h1>
+    
+    <!-- Якорь -->
+    <h2 id="woland">Воланд</h2>
+    <p>Сатана, посетивший Москву...</p>
+    
+    <!-- Таблица персонажей -->
+    <table>
+        <tr>
+            <th>Персонаж</th>
+            <th>Роль</th>
+            <th>Прототип</th>
+        </tr>
+        <tr>
+            <td>Мастер</td>
+            <td>Главный герой</td>
+            <td>Сам Булгаков</td>
+        </tr>
+        <tr>
+            <td>Маргарита</td>
+            <td>Возлюбленная Мастера</td>
+            <td>Е.С. Булгакова</td>
+        </tr>
+    </table>
+    
+    <!-- JS-демонстрация -->
+    <div class="js-demo">
+        <p id="text-scroll">Этот текст начнет прокручиваться через 5 секунд...</p>
+        <button onclick="processText()">Обработать текст</button>
+    </div>
+    
+    <script src="scripts.js"></script>
+</body>
+</html>

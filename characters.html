@@ -2,43 +2,457 @@
 <html lang="ru">
 <head>
     <meta charset="UTF-8">
-    <title>Персонажи романа</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Подробное описание персонажей романа 'Мастер и Маргарита' Михаила Булгакова">
+    <meta name="keywords" content="Мастер и Маргарита, персонажи, Воланд, Мастер, Маргарита, Булгаков, литература">
+    <title>Персонажи романа | Мастер и Маргарита</title>
     <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Дополнительные стили для персонажей */
+        .character-card {
+            background-color: #f9f9f9;
+            border-radius: 8px;
+            padding: 20px;
+            margin-bottom: 30px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        
+        .character-card h3 {
+            color: #2c3e50;
+            border-bottom: 2px solid #4CAF50;
+            padding-bottom: 10px;
+            margin-top: 0;
+        }
+        
+        .character-img {
+            width: 150px;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 5px;
+            margin: 10px 20px 10px 0;
+            float: left;
+        }
+        
+        .clearfix {
+            clear: both;
+        }
+        
+        .stats-box {
+            background-color: #e8f4f8;
+            padding: 15px;
+            border-radius: 5px;
+            margin: 20px 0;
+        }
+        
+        /* Стили для автопрокрутки */
+        #character-scroll-container {
+            height: 120px;
+            overflow: hidden;
+            position: relative;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            padding: 10px;
+            margin: 20px 0;
+            background-color: #fff;
+        }
+        
+        #character-scroll-content {
+            position: absolute;
+            width: 100%;
+        }
+        
+        .highlight {
+            background-color: #fffacd;
+            padding: 2px 5px;
+            border-radius: 3px;
+        }
+    </style>
 </head>
 <body onload="startClock()">
-    <nav>...</nav>
+    <nav>
+        <ul>
+            <li><a href="index.html">Главная</a></li>
+            <li><a href="about.html">О книге</a></li>
+            <li><a href="characters.html" class="active">Персонажи</a></li>
+        </ul>
+    </nav>
     
-    <h1>Персонажи романа</h1>
+    <header>
+        <h1>Персонажи романа "Мастер и Маргарита"</h1>
+        <h2>Ключевые герои и их характеристики</h2>
+    </header>
     
-    <!-- Якорь -->
-    <h2 id="woland">Воланд</h2>
-    <p>Сатана, посетивший Москву...</p>
+    <main>
+        <!-- Воланд и его свита -->
+        <div class="character-card">
+            <h3 id="woland">Воланд и его свита</h3>
+            
+            <h4>Воланд (Сатана)</h4>
+            <img src="images/woland.jpg" alt="Воланд" class="character-img" onerror="this.style.display='none'">
+            <p><strong>Воланд</strong> — таинственный иностранец, профессор черной магии, на самом деле являющийся Сатаной. Он прибывает в Москву 1920-х годов со своей свитой, чтобы провести весенний бал полнолуния.</p>
+            <p>Ключевые черты: всеведение, справедливость (хоть и своеобразная), спокойная ирония, власть над мистическими силами.</p>
+            
+            <div class="clearfix"></div>
+            
+            <h4>Свита Воланда:</h4>
+            <ul>
+                <li><strong>Коровьев-Фагот</strong> — бывший регент, теперь главный помощник Воланда</li>
+                <li><strong>Азазелло</strong> — демон-убийца с огненно-рыжими волосами</li>
+                <li><strong>Бегемот</strong> — огромный говорящий кот, шутник и любитель выпить</li>
+                <li><strong>Гелла</strong> — вампирша, служанка Воланда</li>
+            </ul>
+            
+            <div class="stats-box">
+                <button onclick="showCharacterQuote('woland')">Цитата Воланда</button>
+                <button onclick="analyzeCharacterText('woland')">Анализ текста о Воланде</button>
+            </div>
+        </div>
+        
+        <!-- Мастер и Маргарита -->
+        <div class="character-card">
+            <h3 id="master">Мастер и Маргарита</h3>
+            
+            <h4>Мастер</h4>
+            <img src="images/master.jpg" alt="Мастер" class="character-img" onerror="this.style.display='none'">
+            <p><strong>Мастер</strong> — безымянный писатель, автор романа о Понтии Пилате. Он сходит с ума от травли критиками и сжигает свою рукопись. Представляет собой образ страдающего художника, не понятого современниками.</p>
+            <p>Встреча с Маргаритой становится для него одновременно спасением и проклятием.</p>
+            
+            <div class="clearfix"></div>
+            
+            <h4>Маргарита</h4>
+            <img src="images/margarita.jpg" alt="Маргарита" class="character-img" onerror="this.style.display='none'">
+            <p><strong>Маргарита Николаевна</strong> — замужняя женщина, которая безумно влюбляется в Мастера. Ради его спасения она соглашается стать королевой на балу у Сатаны, проявляя невероятную смелость и преданность.</p>
+            <p>Её образ символизирует вечную женственность, жертвенную любовь и моральную силу.</p>
+            
+            <div class="stats-box">
+                <button onclick="showCharacterQuote('margarita')">Цитата Маргариты</button>
+                <button onclick="countLoveLetters()">Посчитать буквы в слове "Любовь"</button>
+            </div>
+        </div>
+        
+        <!-- Персонажи ершалаимских глав -->
+        <div class="character-card">
+            <h3 id="pilate">Персонажи ершалаимских глав</h3>
+            
+            <table>
+                <thead>
+                    <tr>
+                        <th>Персонаж</th>
+                        <th>Роль в романе</th>
+                        <th>Исторический прототип</th>
+                        <th>Ключевая черта</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>Понтий Пилат</strong></td>
+                        <td>Прокуратор Иудеи</td>
+                        <td>Исторический Понтий Пилат</td>
+                        <td>Нравственные муки, трусость</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Иешуа Га-Ноцри</strong></td>
+                        <td>Бродячий философ</td>
+                        <td>Иисус Христос</td>
+                        <td>Доброта, всепрощение, истина</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Иуда из Кириафа</strong></td>
+                        <td>Предатель Иешуа</td>
+                        <td>Иуда Искариот</td>
+                        <td>Корыстолюбие, предательство</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Левий Матвей</strong></td>
+                        <td>Ученик Иешуа</td>
+                        <td>Апостол Матфей</td>
+                        <td>Преданность, фанатизм</td>
+                    </tr>
+                </tbody>
+            </table>
+            
+            <div class="stats-box">
+                <button onclick="showCharacterStats()">Показать статистику по персонажам</button>
+                <button onclick="changeTableColors()">Изменить цвет таблицы</button>
+            </div>
+        </div>
+        
+        <!-- Демонстрация JavaScript -->
+        <div class="character-card">
+            <h3>Интерактивные возможности</h3>
+            
+            <div class="js-demo">
+                <h4>1. Автоматическая прокрутка описаний персонажей</h4>
+                <div id="character-scroll-container">
+                    <div id="character-scroll-content">
+                        <p><strong>Воланд:</strong> Таинственный иностранец, профессор черной магии, олицетворение Сатаны. Прибывает в Москву со свитой для проведения весеннего бала полнолуния. Всеведущ, спокоен, ироничен. Наказывает грешников, но помогает тем, кто сохранил достоинство и честь.</p>
+                        <p><strong>Мастер:</strong> Безымянный писатель, автор романа о Понтии Пилате. Символ непризнанного гения, страдающего от непонимания общества. Встреча с Маргаритой становится для него одновременно спасением и источником новых страданий. В финале обретает покой.</p>
+                        <p><strong>Маргарита:</strong> Замужняя женщина, безумно влюбленная в Мастера. Ради его спасения соглашается стать королевой на балу у Сатаны. Образ вечной женственности, жертвенной любви и нравственной силы. Её преданность не знает границ.</p>
+                        <p><strong>Понтий Пилат:</strong> Прокуратор Иудеи, обречённый на вечные муки совести за казнь невиновного Иешуа. Символ власти, скованной страхом и политическими расчётами. Его образ раскрывает тему трусости как величайшего порока.</p>
+                        <p><strong>Иешуа Га-Ноцри:</strong> Бродячий философ, проповедующий доброту и всепрощение. Его учение о "царстве истины" противопоставлено жестокости мира. Казнь Иешуа становится центральным событием, определившим судьбы многих персонажей.</p>
+                    </div>
+                </div>
+                <p><em>Через 5 секунд начнется автоматическая прокрутка текста...</em></p>
+                
+                <h4>2. Работа с текстом о персонажах</h4>
+                <p id="character-text-sample">Воланд является центральным мистическим персонажем романа, олицетворяющим силы потустороннего мира, которые, однако, выступают в роли восстановителей справедливости в абсурдной московской действительности.</p>
+                <button onclick="simplifyCharacterText()">Упростить описание (удалить длинные слова)</button>
+                <button onclick="findFrequentCharacterLetter()">Найти частую букву в описании</button>
+                
+                <h4>3. Настройка отображения</h4>
+                <button onclick="toggleCharacterImages()">Скрыть/показать изображения</button>
+                <button onclick="highlightMoscowCharacters()">Подсветить московских персонажей</button>
+                
+                <h4>4. Дата и время в контексте романа</h4>
+                <button onclick="showNovelTime()">Когда происходит действие романа?</button>
+            </div>
+        </div>
+    </main>
     
-    <!-- Таблица персонажей -->
-    <table>
-        <tr>
-            <th>Персонаж</th>
-            <th>Роль</th>
-            <th>Прототип</th>
-        </tr>
-        <tr>
-            <td>Мастер</td>
-            <td>Главный герой</td>
-            <td>Сам Булгаков</td>
-        </tr>
-        <tr>
-            <td>Маргарита</td>
-            <td>Возлюбленная Мастера</td>
-            <td>Е.С. Булгакова</td>
-        </tr>
-    </table>
-    
-    <!-- JS-демонстрация -->
-    <div class="js-demo">
-        <p id="text-scroll">Этот текст начнет прокручиваться через 5 секунд...</p>
-        <button onclick="processText()">Обработать текст</button>
-    </div>
-    
-    <script src="scripts.js"></script>
+    <footer>
+        <p><a href="#woland">К Воланду</a> | <a href="#master">К Мастеру и Маргарите</a> | <a href="#pilate">К Понтию Пилату</a></p>
+        <p>© 2025 Анализ персонажей "Мастер и Маргарита". Все цитаты из романа М.А. Булгакова.</p>
+    </footer>
+
+    <script>
+        // Скрипт 1: Часы в заголовке с тематикой
+        let clockInterval;
+        
+        function startClock() {
+            updateTitleClock();
+            clockInterval = setInterval(updateTitleClock, 1000);
+            // Запускаем автопрокрутку через 5 секунд
+            setTimeout(startAutoScroll, 5000);
+        }
+        
+        function updateTitleClock() {
+            const now = new Date();
+            const timeString = now.toLocaleTimeString('ru-RU', { 
+                hour: '2-digit', 
+                minute: '2-digit',
+                second: '2-digit'
+            });
+            document.title = `Персонажи | ${timeString} | Мастер и Маргарита`;
+        }
+        
+        // Скрипт 2: Автопрокрутка описаний персонажей (осмысленная)
+        function startAutoScroll() {
+            const container = document.getElementById('character-scroll-container');
+            const content = document.getElementById('character-scroll-content');
+            
+            if (!container || !content) return;
+            
+            // Вычисляем высоту для прокрутки
+            const scrollHeight = content.scrollHeight - container.clientHeight;
+            if (scrollHeight <= 0) return;
+            
+            // Плавная прокрутка за 30 секунд
+            let startTime = null;
+            const duration = 30000; // 30 секунд
+            
+            function animateScroll(timestamp) {
+                if (!startTime) startTime = timestamp;
+                const elapsed = timestamp - startTime;
+                const progress = Math.min(elapsed / duration, 1);
+                
+                // Эффект замедления в начале и конце
+                const easeProgress = progress < 0.5 
+                    ? 2 * progress * progress 
+                    : 1 - Math.pow(-2 * progress + 2, 2) / 2;
+                
+                container.scrollTop = easeProgress * scrollHeight;
+                
+                if (progress < 1) {
+                    requestAnimationFrame(animateScroll);
+                } else {
+                    // Когда прокрутка завершена, ждем 3 секунды и начинаем снова
+                    setTimeout(() => {
+                        container.scrollTop = 0;
+                        setTimeout(startAutoScroll, 1000);
+                    }, 3000);
+                }
+            }
+            
+            requestAnimationFrame(animateScroll);
+        }
+        
+        // Скрипт 3: Упрощение текста (удаление длинных слов) - теперь с осмысленным текстом
+        function simplifyCharacterText() {
+            const textElement = document.getElementById('character-text-sample');
+            let text = textElement.textContent;
+            
+            // Разбиваем текст на слова, фильтруем
+            const words = text.split(' ');
+            const simpleWords = words.filter(word => {
+                // Удаляем знаки препинания для проверки длины
+                const cleanWord = word.replace(/[.,!?;:«»]/g, '');
+                return cleanWord.length <= 7;
+            });
+            
+            const newText = simpleWords.join(' ') + ' [Текст упрощен]';
+            textElement.textContent = newText;
+            
+            // Показываем результат
+            alert(`Упрощенное описание персонажа:\n\n${newText}`);
+        }
+        
+        // Скрипт 4: Найти частую букву в описании персонажа
+        function findFrequentCharacterLetter() {
+            const text = document.getElementById('character-text-sample').textContent.toLowerCase();
+            const letters = {};
+            
+            // Считаем только русские буквы
+            for (let char of text) {
+                if (char.match(/[а-я]/)) {
+                    letters[char] = (letters[char] || 0) + 1;
+                }
+            }
+            
+            // Находим самую частую букву
+            let maxLetter = '';
+            let maxCount = 0;
+            
+            for (let letter in letters) {
+                if (letters[letter] > maxCount) {
+                    maxCount = letters[letter];
+                    maxLetter = letter;
+                }
+            }
+            
+            if (maxLetter) {
+                alert(`В описании персонажа чаще всего встречается буква "${maxLetter}" (${maxCount} раз)`);
+            } else {
+                alert("Не удалось найти русские буквы в тексте");
+            }
+        }
+        
+        // Скрипт 5: Показать цитату персонажа
+        function showCharacterQuote(character) {
+            const quotes = {
+                woland: "«Никогда и ничего не просите! Никогда и ничего, и в особенности у тех, кто сильнее вас. Сами предложат и сами всё дадут!»",
+                margarita: "«Я погибаю вместе с тобой. Я сейчас же умру. Прощай!» — крикнула Маргарита, и её голос сорвался."
+            };
+            
+            const characterNames = {
+                woland: "Воланд",
+                margarita: "Маргарита"
+            };
+            
+            alert(`${characterNames[character]} говорит:\n\n${quotes[character] || "Цитата не найдена"}`);
+        }
+        
+        // Скрипт 6: Анализ текста о персонаже
+        function analyzeCharacterText(character) {
+            let text = "";
+            
+            if (character === 'woland') {
+                text = "Воланд — таинственный иностранец, профессор черной магии, на самом деле являющийся Сатаной. Он прибывает в Москву 1920-х годов со своей свитой, чтобы провести весенний бал полнолуния.";
+            }
+            
+            // Считаем слова и буквы
+            const words = text.split(' ').length;
+            const letters = text.replace(/[^а-я]/gi, '').length;
+            
+            alert(`Анализ текста о Воланде:\n\n- Слов в описании: ${words}\n- Букв в описании: ${letters}\n- Первое предложение: "${text.split('.')[0]}."`);
+        }
+        
+        // Скрипт 7: Посчитать буквы в слове "Любовь" (тема романа)
+        function countLoveLetters() {
+            const word = "Любовь";
+            const lowerWord = word.toLowerCase();
+            const letters = {};
+            
+            for (let char of lowerWord) {
+                letters[char] = (letters[char] || 0) + 1;
+            }
+            
+            let result = `Анализ слова "${word}":\n\n`;
+            for (let letter in letters) {
+                result += `- Буква "${letter}": ${letters[letter]} раз\n`;
+            }
+            
+            result += `\nВсего букв: ${word.length}`;
+            alert(result);
+        }
+        
+        // Скрипт 8: Показать статистику по персонажам
+        function showCharacterStats() {
+            const rows = document.querySelectorAll('table tbody tr');
+            const stats = {
+                total: rows.length,
+                historical: 0,
+                moscow: 0
+            };
+            
+            rows.forEach(row => {
+                const roleCell = row.cells[1];
+                if (roleCell && roleCell.textContent.includes('Иудеи') || 
+                    roleCell.textContent.includes('философ') || 
+                    roleCell.textContent.includes('Предатель') || 
+                    roleCell.textContent.includes('Ученик')) {
+                    stats.historical++;
+                } else {
+                    stats.moscow++;
+                }
+            });
+            
+            alert(`Статистика по персонажам:\n\n- Всего персонажей: ${stats.total}\n- Исторических персонажей: ${stats.historical}\n- Московских персонажей: ${stats.moscow}\n\n*Персонажи ершалаимских глав считаются историческими.`);
+        }
+        
+        // Скрипт 9: Изменить цвет таблицы
+        function changeTableColors() {
+            const table = document.querySelector('table');
+            const colors = ['#f0f8ff', '#f5f5dc', '#f0fff0', '#fff0f5', '#f8f8ff'];
+            const randomColor = colors[Math.floor(Math.random() * colors.length)];
+            
+            table.style.backgroundColor = randomColor;
+            table.style.transition = 'background-color 0.5s';
+        }
+        
+        // Скрипт 10: Скрыть/показать изображения
+        function toggleCharacterImages() {
+            const images = document.querySelectorAll('.character-img');
+            const isVisible = images[0].style.display !== 'none';
+            
+            images.forEach(img => {
+                img.style.display = isVisible ? 'none' : '';
+            });
+            
+            alert(`Изображения персонажей ${isVisible ? 'скрыты' : 'показаны'}`);
+        }
+        
+        // Скрипт 11: Подсветить московских персонажей
+        function highlightMoscowCharacters() {
+            const elements = document.querySelectorAll('p, li, td');
+            const moscowKeywords = ['Воланд', 'Мастер', 'Маргарита', 'Коровьев', 'Азазелло', 'Бегемот', 'Гелла', 'Москв'];
+            
+            elements.forEach(el => {
+                const text = el.textContent;
+                moscowKeywords.forEach(keyword => {
+                    if (text.includes(keyword)) {
+                        const regex = new RegExp(`(${keyword}[а-я]*)`, 'gi');
+                        el.innerHTML = el.innerHTML.replace(regex, '<span class="highlight">$1</span>');
+                    }
+                });
+            });
+            
+            alert('Московские персонажи подсвечены желтым цветом');
+        }
+        
+        // Скрипт 12: Показать время действия романа
+        function showNovelTime() {
+            const now = new Date();
+            // Действие происходит в 1929 году (в Москве) и в 29 году н.э. (в Ершалаиме)
+            const novelDates = {
+                moscow: 1929,
+                yershalaim: 29
+            };
+            
+            const moscowYearsAgo = now.getFullYear() - novelDates.moscow;
+            const yershalaimYearsAgo = now.getFullYear() - novelDates.yershalaim;
+            
+            alert(`Время действия романа "Мастер и Маргарита":\n\n- Московские главы: май 1929 года (${moscowYearsAgo} лет назад)\n- Ершалаимские главы: 29 год н.э. (около ${yershalaimYearsAgo} лет назад)\n\nТекущая дата: ${now.toLocaleDateString('ru-RU')}`);
+        }
+    </script>
 </body>
 </html>

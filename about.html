@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <!-- 1. Обязательные МЕТА-ТЕГИ -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Страница об авторе и создании книги. Узнайте больше о любимой книге.">
+    <meta name="keywords" content="автор, создание, история, книга">
+    
+    <!-- 2. ЗАГОЛОВОК страницы -->
+    <title>О книге и авторе | Мой книжный сайт</title>
+    
+    <!-- 3. Подключение CSS (убедитесь, что файл styles.css существует) -->
+    <link rel="stylesheet" href="styles.css">
+    
+    <!-- 4. Иконка сайта (опционально, но рекомендуется) -->
+    <link rel="icon" type="image/x-icon" href="images/favicon.ico">
+</head>
+<body>
+    <!-- ===== НАВИГАЦИОННОЕ МЕНЮ (должно быть одинаковым на всех страницах) ===== -->
+    <nav>
+        <ul>
+            <li><a href="index.html">Главная</a></li>
+            <li><a href="about.html" class="active">О книге</a></li>
+            <li><a href="characters.html">Персонажи</a></li>
+        </ul>
+    </nav>
+
+    <!-- ===== ОСНОВНОЕ СОДЕРЖИМОЕ СТРАНИЦЫ ===== -->
+    <main>
+        <!-- 5. ЗАГОЛОВКИ РАЗНЫХ УРОВНЕЙ -->
+        <h1>О книге и авторе</h1>
+        <h2>История создания шедевра</h2>
+        
+        <!-- 6. ИЗОБРАЖЕНИЕ С ОБТЕКАНИЕМ ТЕКСТОМ СПРАВА -->
+        <img src="images/author.jpg" alt="Портрет автора книги" class="float-right" width="300">
+        
+        <!-- 7. ОСНОВНОЙ ТЕКСТ -->
+        <p>Этот раздел посвящён истории создания книги и её автору. Здесь вы найдёте интересные факты и детали, которые помогут лучше понять произведение.</p>
+        
+        <p><strong>Книга была написана</strong> в период с 1928 по 1940 год. Автор работал над ней практически до конца своей жизни, внося многочисленные правки и изменения.</p>
+        
+        <p>Роман сочетает в себе несколько жанров, что делает его уникальным явлением в мировой литературе. В нём переплетаются элементы мистики, сатиры, философии и любовной истории.</p>
+        
+        <!-- 8. НУМЕРОВАННЫЙ СПИСОК (пример этапов работы) -->
+        <h3>Этапы работы над произведением:</h3>
+        <ol>
+            <li>Первые наброски и идея (1928-1929 гг.)</li>
+            <li>Создание чернового варианта (1930-1932 гг.)</li>
+            <li>Кардинальная переработка сюжета (1933-1936 гг.)</li>
+            <li>Финальная редакция и правки (1937-1940 гг.)</li>
+        </ol>
+        
+        <!-- 9. МАРКИРОВАННЫЙ СПИСОК (интересные факты) -->
+        <h3>Интересные факты:</h3>
+        <ul>
+            <li>Первоначальное название книги было другим</li>
+            <li>Рукопись чуть не была уничтожена автором</li>
+            <li>Первая публикация состоялась через 26 лет после написания</li>
+            <li>Книга переведена на более чем 50 языков мира</li>
+        </ul>
+        
+        <!-- 10. ТАБЛИЦА (издания книги) -->
+        <h3>Первые издания книги:</h3>
+        <table>
+            <thead>
+                <tr>
+                    <th>Год</th>
+                    <th>Издательство</th>
+                    <th>Тираж</th>
+                    <th>Примечание</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1966</td>
+                    <td>Журнал "Москва"</td>
+                    <td>150 000</td>
+                    <td>С купюрами</td>
+                </tr>
+                <tr>
+                    <td>1967</td>
+                    <td>Издательство "Московский рабочий"</td>
+                    <td>100 000</td>
+                    <td>Первое книжное издание</td>
+                </tr>
+                <tr>
+                    <td>1973</td>
+                    <td>Полное издание</td>
+                    <td>50 000</td>
+                    <td>Без цензуры</td>
+                </tr>
+            </tbody>
+        </table>
+        
+        <!-- 11. ВНУТРЕННИЕ ССЫЛКИ-ЯКОРИ (в пределах этой страницы) -->
+        <h3 id="author-bio">Биография автора</h3>
+        <p>Автор родился в 1891 году в Киеве. Изучал медицину, работал врачом, но настоящим призванием стала литература.</p>
+        
+        <!-- Ссылка на якорь внутри страницы -->
+        <p><a href="#author-bio">Перейти к биографии автора</a> | 
+           <a href="#adaptations">Перейти к экранизациям</a></p>
+        
+        <!-- 12. ВНЕШНИЕ ССЫЛКИ -->
+        <h3>Дополнительные ресурсы:</h3>
+        <ul>
+            <li><a href="https://ru.wikipedia.org/wiki/Мастер_и_Маргарита" target="_blank">Статья о книге в Википедии</a></li>
+            <li><a href="https://www.culture.ru/literature/books/master-i-margarita" target="_blank">Анализ произведения на Культура.РФ</a></li>
+        </ul>
+        
+        <h3 id="adaptations">Экранизации и постановки</h3>
+        <p>Книга была многократно экранизирована и поставлена на театральной сцене в разных странах мира.</p>
+        
+        <!-- 13. ОБЛАСТЬ ДЛЯ ДЕМОНСТРАЦИИ JAVASCRIPT -->
+        <div class="js-demo">
+            <h3>Демонстрация JavaScript</h3>
+            
+            <!-- Скрипт 1: Кнопка для показа даты -->
+            <button onclick="showCurrentDate()">Показать текущую дату</button>
+            
+            <!-- Скрипт 2: Кнопки для изменения фона -->
+            <p>Изменить цвет фона:</p>
+            <button onclick="changeBackgroundColor('#E6F7FF')">Голубой</button>
+            <button onclick="changeBackgroundColor('#FFF2E6')">Персиковый</button>
+            <button onclick="changeBackgroundColor('#F0F0F0')">Серый</button>
+            <button onclick="changeBackgroundColor('#FFFFFF')">Сбросить на белый</button>
+            
+            <!-- Скрипт 3: Удаление слов длиннее 7 букв -->
+            <div style="margin-top: 20px;">
+                <p id="text-sample">Эта замечательная книга представляет собой невероятно интересное литературное произведение, которое очаровывает читателей своим глубоким содержанием.</p>
+                <button onclick="removeLongWords()">Удалить слова длиннее 7 букв</button>
+            </div>
+        </div>
+    </main>
+
+    <!-- ===== ПОДВАЛ СТРАНИЦЫ ===== -->
+    <footer>
+        <!-- 14. ВНУТРЕННИЕ ССЫЛКИ на другие страницы сайта -->
+        <p>
+            <a href="index.html">На главную</a> | 
+            <a href="characters.html">Персонажи</a> | 
+            <a href="about.html#author-bio">Биография автора</a>
+        </p>
+        <p>© 2025 Фан-сайт любимой книги. Все права на произведение принадлежат автору.</p>
+    </footer>
+
+    <!-- ===== ПОДКЛЮЧЕНИЕ JAVASCRIPT ===== -->
+    <script>
+        // Скрипт 1: ПОКАЗАТЬ ТЕКУЩУЮ ДАТУ
+        function showCurrentDate() {
+            const now = new Date();
+            const options = { 
+                weekday: 'long', 
+                year: 'numeric', 
+                month: 'long', 
+                day: 'numeric',
+                hour: '2-digit',
+                minute: '2-digit'
+            };
+            alert(`Текущая дата и время:\n${now.toLocaleDateString('ru-RU', options)}`);
+        }
+
+        // Скрипт 2: ИЗМЕНИТЬ ЦВЕТ ФОНА
+        function changeBackgroundColor(color) {
+            document.body.style.backgroundColor = color;
+        }
+
+        // Скрипт 3: УДАЛИТЬ СЛОВА ДЛИННЕЕ 7 БУКВ
+        function removeLongWords() {
+            const textElement = document.getElementById('text-sample');
+            let text = textElement.textContent;
+            
+            // Разбиваем текст на слова, фильтруем и собираем обратно
+            const words = text.split(' ');
+            const shortWords = words.filter(word => {
+                // Учитываем только буквы (игнорируем знаки препинания)
+                const cleanWord = word.replace(/[.,!?;:]/g, '');
+                return cleanWord.length <= 7;
+            });
+            
+            const newText = shortWords.join(' ');
+            textElement.textContent = newText + " [Текст обработан]";
+        }
+
+        // Скрипт 4: ИДУЩИЕ ЧАСЫ В ЗАГОЛОВКЕ (Title) - запускаются автоматически
+        function updateTitleClock() {
+            const now = new Date();
+            const timeString = now.toLocaleTimeString('ru-RU', { 
+                hour: '2-digit', 
+                minute: '2-digit',
+                second: '2-digit'
+            });
+            document.title = `О книге | ${timeString}`;
+        }
+        
+        // Запускаем обновление часов каждую секунду
+        setInterval(updateTitleClock, 1000);
+        updateTitleClock(); // Первый вызов сразу
+
+        // Скрипт 5: АВТОМАТИЧЕСКАЯ ПРОКРУТКА ТЕКСТА ЧЕРЕЗ 5 СЕКУНД
+        setTimeout(() => {
+            const footer = document.querySelector('footer');
+            if (footer) {
+                footer.scrollIntoView({ behavior: 'smooth' });
+                alert("Прошло 5 секунд! Страница автоматически прокручена к подвалу.");
+            }
+        }, 5000);
+    </script>
+</body>
+</html>

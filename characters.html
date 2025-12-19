@@ -272,7 +272,7 @@
             requestAnimationFrame(animateScroll);
         }
         
-        // Скрипт 3: Упрощение текста (удаление длинных слов) - теперь с осмысленным текстом
+        // Скрипт 3: Упрощение текста (удаление длинных слов)
         function simplifyCharacterText() {
             const textElement = document.getElementById('character-text-sample');
             let text = textElement.textContent;
@@ -403,18 +403,6 @@
             
             table.style.backgroundColor = randomColor;
             table.style.transition = 'background-color 0.5s';
-        }
-        
-        // Скрипт 10: Скрыть/показать изображения
-        function toggleCharacterImages() {
-            const images = document.querySelectorAll('.character-img');
-            const isVisible = images[0].style.display !== 'none';
-            
-            images.forEach(img => {
-                img.style.display = isVisible ? 'none' : '';
-            });
-            
-            alert(`Изображения персонажей ${isVisible ? 'скрыты' : 'показаны'}`);
         }
         
         // Скрипт 11: Подсветить московских персонажей
